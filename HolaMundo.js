@@ -1,1 +1,1 @@
-return ('Hola Mundo')
+console.log ('Hola Mundo, esto es una prueba')
