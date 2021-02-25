@@ -13,7 +13,6 @@ let post =
 //Creacion de post
 const addPost = params => {
     const { posts=[], autor, text, fecha, categoria} = params
-    // Lógica
     posts.push([autor, text, fecha, categoria]);
     return posts
    }
