@@ -1,5 +1,7 @@
-//Creacion del arreglo
-let posts = 
+//Arreflo que contiene todos los post
+let posts= []
+//Creacion del orimer post
+let post = 
     {
     autor: 'Marco',
     text: 'Este es el primer Blog.',
@@ -11,21 +13,7 @@ let posts =
 //Creacion de post
 const addPost = params => {
     const { posts=[], autor, text, fecha, categoria} = params
-    //post
-    
-    //autor
-
-
-    ///text
-
-
-    //fecha
-    let date = new Date();
-    fecha: date;
-
-    //Categoria
-    const categoria = ({post, categoria, categoria1,categoria2}) =>{
-    post[categoria].push(categoria1,categoria2);    
-    }
+    // Lógica
+    posts.push([autor, text, fecha, categoria]);
     return posts
-}
+   }
