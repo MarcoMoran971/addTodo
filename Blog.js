@@ -9,6 +9,14 @@ let post =
     categoria: ['general', 'F1'],
     }
 
+    let post1 = 
+    {
+    autor: 'Karla',
+    text: 'Este es el segundo Blog.',
+    fecha: 31/01/2021,
+    categoria: ['general', 'Musica'],
+    }
+
     
 //Creacion de post
 const addPost = params => {
@@ -30,3 +38,10 @@ const deletePost = params => {
     delete posts[index]
     return posts
     }
+
+//Mostrar un post
+    const getPost = params => {
+        const {posts= [], index} = params
+        console.log (posts[index])
+        return posts
+        }  
