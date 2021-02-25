@@ -26,7 +26,7 @@ const addPost = params => {
 
     //fecha
     let date = new Date();
-     fecha: date;
+    fecha: date;
 
     //Categoria
     const categoria = ({post, categoria, categoria1,categoria2}) =>{
