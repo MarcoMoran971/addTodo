@@ -90,7 +90,7 @@ else {
 
 
 //agregar categoria
- const addCategory = ({list,key}) =>{
-list[key] = []
+ const addCategory = ({list,key,newValue}) =>{
+list[key] = [newValue]
 return list
 }
