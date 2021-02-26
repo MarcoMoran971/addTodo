@@ -88,3 +88,12 @@ const deletePost = params => {
 
 
     }   
+
+    //Filtros de post
+    const filterPosts = params => {
+        const {posts = [], categoria = []} = params
+
+        console.log (posts[categoria])
+
+        return posts // Retornar el arreglo con las categorías
+        }
