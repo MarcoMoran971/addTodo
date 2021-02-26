@@ -95,11 +95,10 @@ const deletePost = params => {
 
         let postsCategories = [];
          for (let i = 0; i < posts.length; i++) {
-           if (posts[i].categoria === posts.categoria[]) {
+           if (posts[i].categoria === posts[categoria]) {
              postsCategories.push(posts[i]);
     }
 }
 console.log(postsCategories);
-
         return posts // Retornar el arreglo con las categorías
         }
