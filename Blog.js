@@ -5,7 +5,7 @@ let post =
     {
     autor: 'Marco',
     text: 'Este es el primer Blog.',
-    fecha: 31/01/2022,
+    fecha: Date(),
     categoria: ['general', 'F1'],
     }
 
@@ -13,7 +13,7 @@ let post =
     {
     autor: 'Karla',
     text: 'Este es el segundo Blog.',
-    fecha: 5/02/2021,
+    fecha: Date(),
     categoria: ['general', 'Musica'],
     }
 
@@ -21,7 +21,7 @@ let post =
     {
     autor: 'Raul',
     text: 'Este es el tercer Blog.',
-    fecha: 24/02/2020,
+    fecha: Date(),
     categoria: ['general', 'Programacion'],
     }
     
@@ -53,9 +53,10 @@ const deletePost = params => {
         return posts
         }  
 
- //Ordenar posts
- const sortPosts = params => {
+ //Ordenar posts por autor
+ const sortPostsAutor = params => {
     const {posts = [], key} = params
+
     posts.sort(function (a,b,key = 'autor') {
         if (a[key] > b[key]) {
            return 1 
@@ -66,4 +67,24 @@ const deletePost = params => {
         return 0
     })
     return posts
+
+
     }    
+
+     //Ordenar posts por fecha
+ const sortPostsDate = params => {
+    const {posts = [], key} = params
+
+    posts.sort(function (date1,date2,key = 'fecha') {
+        if (date1[key] > date2[key]) {
+           return 1 
+        }
+        if (date1[key] < date2[key]) {
+            return -1
+        }
+        return 0
+    })
+    return posts
+
+
+    }   
