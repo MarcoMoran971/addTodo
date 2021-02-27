@@ -6,7 +6,7 @@ let post =
     autor: 'Marco',
     text: 'Este es el primer Blog.',
     fecha: Date(),
-    categoria: ['general', 'F1'],
+    categoria: ['general', 'Musica'],
     }
 
     let post1 = 
@@ -95,7 +95,7 @@ const deletePost = params => {
 
         let postsCategories = [];
          for (let i = 0; i < posts.length; i++) {
-           if (posts[i].categoria === posts[categoria]) {
+           if (posts[i].categoria.includes("general","Musica")) {
              postsCategories.push(posts[i]);
     }
 }
