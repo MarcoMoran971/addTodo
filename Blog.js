@@ -22,7 +22,7 @@ let post =
     autor: 'Raul',
     text: 'Este es el tercer Blog.',
     fecha: Date(),
-    categoria: ['general', 'Programacion'],
+    categoria: ['Informatica', 'Programacion'],
     }
     
 //Creacion de post
@@ -104,12 +104,27 @@ const deletePost = params => {
     }   
 
     //Filtros de post
-    const filterPosts = params => {
+    const filterPostsGenMus = params => {
         const {posts = [], categoria = []} = params
 
         let postsCategories = [];
          for (let i = 0; i < posts.length; i++) {
            if (posts[i].categoria.includes("general","Musica")) {
+             postsCategories.push(posts[i]);
+    }
+}
+console.log(postsCategories);
+        return posts // Retornar el arreglo con las categorías
+        }
+
+
+        //Filtros de post
+    const filterPostsInfoProgram = params => {
+        const {posts = [], categoria = []} = params
+
+        let postsCategories = [];
+         for (let i = 0; i < posts.length; i++) {
+           if (posts[i].categoria.includes("Informatica","Programacion")) {
              postsCategories.push(posts[i]);
     }
 }
