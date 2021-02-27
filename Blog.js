@@ -35,21 +35,35 @@ const addPost = params => {
 //Editar post
 const editPost = params => {
 const { posts=[], autor, text, fecha, categoria, index} = params
-posts[index]=({autor, text, fecha, categoria})
-return posts
+if (posts[index]) {
+    posts [index]= ({autor,text,fecha,categoria})
+    } else { 
+        alert ('El valor del index no existe')
+      }
+  return posts
 }
 
 //Eliminar un post
 const deletePost = params => {
     const { posts=[], index } = params
-    delete posts[index]
+    if(posts[index]){
+        delete posts[index]
+    }
+    else{
+        alert ('El valor del index no existe')
+    }
     return posts
     }
 
 //Mostrar un post
     const getPost = params => {
         const {posts= [], index} = params
-        console.log (posts[index])
+        if(posts[index]){
+            console.log (posts[index])
+        }
+       else{
+        alert ('El valor del index no existe')
+       }
         return posts
         }  
 
