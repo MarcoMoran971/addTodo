@@ -104,30 +104,15 @@ const deletePost = params => {
     }   
 
     //Filtros de post
-    const filterPostsGenMus = params => {
-        const {posts = [], categoria = []} = params
+    const filterPosts = params => {
+        const {posts = [], categories = []} = params
 
-        let postsCategories = [];
-         for (let i = 0; i < posts.length; i++) {
-           if (posts[i].categoria.includes("general","Musica")) {
-             postsCategories.push(posts[i]);
-    }
-}
-console.log(postsCategories);
-        return posts // Retornar el arreglo con las categorías
+        return posts.filter(post => {
+        for (let index = 0, lt = categories.length; index < lt; index++) {
+        const category = categories[index]
+        if (post.categories.includes(category)) {
+        return post
         }
-
-
-        //Filtros de post
-    const filterPostsInfoProgram = params => {
-        const {posts = [], categoria = []} = params
-
-        let postsCategories = [];
-         for (let i = 0; i < posts.length; i++) {
-           if (posts[i].categoria.includes("Informatica","Programacion")) {
-             postsCategories.push(posts[i]);
-    }
-}
-console.log(postsCategories);
-        return posts // Retornar el arreglo con las categorías
+        }
+        })
         }
