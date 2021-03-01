@@ -6,7 +6,7 @@ let post =
     autor: 'Marco',
     text: 'Este es el primer Blog.',
     fecha: Date(),
-    categoria: ['general', 'Musica'],
+    categoria: ['Musica', 'F1'],
     }
 
     let post1 = 
@@ -14,7 +14,7 @@ let post =
     autor: 'Karla',
     text: 'Este es el segundo Blog.',
     fecha: Date(),
-    categoria: ['general', 'Musica'],
+    categoria: ['Libros', 'Musica'],
     }
 
     let post2 = 
@@ -99,8 +99,6 @@ const deletePost = params => {
         return 0
     })
     return posts
-
-
     }   
 
     //Filtros de post
