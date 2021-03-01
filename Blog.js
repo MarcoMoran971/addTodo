@@ -103,12 +103,12 @@ const deletePost = params => {
 
     //Filtros de post
     const filterPosts = params => {
-        const {posts = [], categories = []} = params
+        const {posts = [], categoria = []} = params
 
         return posts.filter(post => {
-        for (let index = 0, lt = categories.length; index < lt; index++) {
-        const category = categories[index]
-        if (post.categories.includes(category)) {
+        for (let index = 0, lt = categoria.length; index < lt; index++) {
+        const category = categoria[index]
+        if (post.categoria.includes(category)) {
         return post
         }
         }
